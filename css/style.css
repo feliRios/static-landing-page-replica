@@ -1,0 +1,104 @@
+html, body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: linear-gradient(148deg, rgba(0,109,164,1) 17%, rgba(1,104,163,1) 17%, rgba(0,96,144,1) 79%, rgba(1,95,133,1) 79%);
+  font-family: 'San Francisco Text Light';
+}
+
+header {
+  height: 20vh;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 130px;
+  margin: 0 auto;
+  max-width: 1423px;
+}
+
+.navbar img {
+  max-width: 180px;
+  margin-right: 75px;
+  height: 100%;
+}
+
+.navbar-options {
+  width: 100%;
+}
+
+.navbar-options ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-options li {
+  color: rgb(255, 255, 255);
+}
+
+.sign-up {
+  background-color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 30px;
+}
+
+hr {
+  max-width: 85vw;
+  border: none;
+  height: 1px;
+  background-color: #ffffff;  /* Modern Browsers */
+  opacity: 0.2;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  color: #ffffff;
+}
+
+.plan-information-header h2 {
+  font-size: 50px;
+  font-weight: 200;
+  margin: 20px 0px;
+}
+
+.plan-information-header h2 span {
+  font-weight: 600;
+}
+
+.plan-information-src {
+  width: 500px;
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 60px;
+}
+
+.plan-information-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.plan-information-getstarted a {
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #487611;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.35);
+}
