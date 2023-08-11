@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
@@ -6,12 +7,23 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  background: linear-gradient(148deg, rgba(0,109,164,1) 17%, rgba(1,104,163,1) 17%, rgba(0,96,144,1) 79%, rgba(1,95,133,1) 79%);
-  font-family: 'San Francisco Text Light';
+  background: linear-gradient(
+    148deg,
+    rgba(0, 109, 164, 1) 17%,
+    rgba(1, 104, 163, 1) 17%,
+    rgba(0, 96, 144, 1) 79%,
+    rgba(1, 95, 133, 1) 79%
+  );
+  font-family: "San Francisco Text Light";
 }
 
 header {
   height: 20vh;
+}
+
+.page {
+  max-width: 70vw;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -64,15 +76,22 @@ header {
 hr {
   border: none;
   height: 1px;
-  background-color: #ffffff;  /* Modern Browsers */
+  background-color: #ffffff; /* Modern Browsers */
   opacity: 0.2;
 }
 
+.image-man img {
+  width: 75vw;
+  max-width: 400px;
+  min-width: 320px;
+  margin: auto;
+}
+
 .container {
+  display: flex;
   width: 90%;
   margin: 0 auto;
   padding-top: 20px;
-  display: flex;
   color: #ffffff;
 }
 
@@ -107,7 +126,7 @@ hr {
   color: #ffffff;
   padding: 15px;
   border-radius: 6px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
   transition: all 0.2s ease-in-out;
 }
 
@@ -115,11 +134,135 @@ hr {
   background-color: #56861b;
 }
 
-.page {
-  width: 80vw;
-  margin: 0 auto;
+/* NAVBAR RESPONSIVE */
+
+.menu-hamburguesa {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 80px;
+  top: 35px;
+  cursor: pointer;
 }
 
-@media (max-width: 1400px) {
+.menu-linea {
+  background-color: #fafafa;
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
 
+.menu-linea1-active {
+  transform-origin: 0px 100%;
+  transform: rotate(45deg) translate(0px, 2px);
+}
+
+.menu-linea2-active {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.menu-linea3-active {
+  transform-origin: 0px 100%;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1540px) {
+  .navbar img {
+    max-width: 180px;
+    margin-right: 3vw;
+    height: 100%;
+  }
+
+  .navbar-options {
+    width: 100%;
+    margin-left: 3vw;
+  }
+}
+
+@media (max-width: 1430px) {
+  .page {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 1125px) {
+  .image-man img {
+    width: 50vw;
+    max-width: 300px;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 990px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan-information-header h2 {
+    font-size: 60px;
+    font-weight: 200;
+    text-align: center;
+    margin: 20px 0px;
+    margin-bottom: 50px;
+  }
+
+  .plan-information-src {
+    width: 100%;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 60px;
+  }
+
+  .plan-information-facts {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .image-man img {
+    display: flex;
+    box-sizing: border-box;
+    width: 50vw;
+    max-width: 80vw;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 60px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .plan-information-getstarted a {
+    display: block;
+    width: 95%;
+    font-size: 36px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #487611;
+    color: #fafafa;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-man img {
+    display: flex;
+    box-sizing: border-box;
+    width: 80vw;
+    max-width: 80vw;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 60px 0px;
+  }
 }
