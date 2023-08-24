@@ -136,18 +136,23 @@ hr {
 /* NAVBAR RESPONSIVE */
 
 #nv-responsive {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  top: -764px;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: -100%;
   left: 0;
   width: 100%;
   background-color: #fafafa;
-  transition: all .8s ease-in-out;
+  transition: top .8s ease-in-out;
 }
 
-.nv-oculto {
-  display: none;
+#nv-responsive.nv-show {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  top: 0;
+  opacity: 1;
 }
 
 #nv-responsive ul {
@@ -167,13 +172,7 @@ hr {
 }
 
 .menu-hamburguesa {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  right: 80px;
-  top: 35px;
-  cursor: pointer;
-  z-index: 999;
+  display: none;
 }
 
 .menu-linea {
@@ -228,6 +227,19 @@ hr {
     max-width: 300px;
     min-width: 200px;
     margin: 0 auto;
+  }
+  .menu-hamburguesa {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 80px;
+    top: 35px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .navbar-options {
+    display: none;
   }
 }
 
