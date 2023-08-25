@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   min-height: 100%;
@@ -288,7 +292,7 @@ hr {
 @media (max-width: 768px) {
   .plan-information-getstarted a {
     display: block;
-    width: 95%;
+    width: 100%;
     font-size: 36px;
     text-align: center;
     text-decoration: none;
